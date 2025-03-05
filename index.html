@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MIA: Harmfirst: Evaluación de Ideas Musicales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎹</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Formulario inicial -->
+    <div id="initialForm">
+        <h1>Algoritmo MIA Harmfirst a1</h1>
+        <h2>Información del Evaluador</h2>
+        <form id="userForm">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Género:</label>
+                <select id="gender">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="age">Edad:</label>
+                <input type="number" id="age" required>
+            </div>
+            <div class="form-group">
+                <label for="semester">Semestre:</label>
+                <input type="text" id="semester" required>
+            </div>
+            <div class="form-group">
+                <button type="button" id="selectFolderBtn">Seleccionar carpeta "songs"</button>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="startBtn" disabled>Iniciar Evaluación</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Sección de evaluación -->
+    <div id="evaluation">
+        <!-- Se eliminó el div de progreso -->
+        <!-- Contenedor central para video y preguntas -->
+        <div class="center-container">
+            <div id="songContainer">
+                <span>
+                    <h2 id="songTitleLabel"></h2>
+                    <h2 id="songTitle"></h2>
+                    <h2 id="songTitleCounter"></h2>
+                </span>
+                <video id="songVideo" controls>
+                    El navegador no soporta el elemento de video.
+                </video>
+            </div>
+            <div id="questionContainer">
+                <span class="sectionTitleSpan">
+                    <h3 id="sectionTitleLabel"></h3>
+                    <h3 id="sectionTitle"></h3>
+                    <h3 id="sectionTitleCounter"></h3>
+                </span>
+                <p id="questionText"></p>
+                <div id="scale">
+                    <span id="leftLabel"></span>
+                    <div id="scaleButtons"></div>
+                    <span id="rightLabel"></span>
+                </div>
+                <div id="navigation">
+                    <button id="prevBtn" disabled>Anterior</button>
+                    <button id="nextBtn" disabled>Siguiente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
